@@ -18,8 +18,13 @@ class MainActivity : AppCompatActivity() {
 //            어느화면에 넘겨줄지 명시
             val intent = Intent(Intent.ACTION_DIAL, uri)
             startActivity(intent)
+        }
 
-
+        callBtn.setOnClickListener {
+            val uri = Uri.parse("tel:01065781700")
+            val intent = Intent(Intent.ACTION_CALL, uri)
+            startActivity(intent)//처리전 앱 죽는다.
+            //마시멜로 업데이트 ( 보안별 팝업이 뜸 이전에는 모든 권한 동의가 뜸 )
         }
     }
 }
