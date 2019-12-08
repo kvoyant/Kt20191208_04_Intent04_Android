@@ -26,5 +26,26 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)//처리전 앱 죽는다. 코드는 맞
             //마시멜로 업데이트 ( 보안별 팝업이 뜸 이전에는 모든 권한 동의가 뜸 )
         }
+
+        smsBtn.setOnClickListener {
+//            누구에게 문자를 보낼지 uri로 명시
+            val uri = Uri.parse("smsto:${smsNumEdt.text.toString()}")
+
+            val intent = Intent(Intent.ACTION_SENDTO, uri)
+            intent.putExtra("sms_body", "광고 문구 입력하자")
+            startActivity(intent)
+        }
+
+        daumBtn.setOnClickListener {
+            val uri = Uri.parse("https://daum.net")
+            val intent = Intent(Intent.ACTION_VIEW, uri)
+            startActivity(intent)
+        }
+
+        kakaoAppBtn.setOnClickListener {
+            val uri = Uri.parse("market://details?id=com.kakao.talk&hl=ko")
+            val intent = Intent(Intent.ACTION_VIEW, uri)
+            startActivity(intent)
+        }
     }
 }

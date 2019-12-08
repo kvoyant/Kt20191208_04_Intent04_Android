@@ -20,4 +20,28 @@
         android:layout_height="wrap_content"
         android:text="실제 전화 걸기(010-1234-5678)" />
 
+    <EditText
+        android:id="@+id/smsNumEdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="문자를 받을 사람 번호 입력"
+        android:inputType="phone" />
+
+    <Button
+        android:id="@+id/smsBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="문자 전송 화면(입력한 번호로)" />
+    <Button
+        android:id="@+id/daumBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="다음 화면으로 보내기" />
+    <Button
+        android:id="@+id/kakaoAppBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="카카오로 보내기" />
+
+
 </LinearLayout>
