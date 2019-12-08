@@ -42,6 +42,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="카카오로 보내기" />
+    <Button
+        android:id="@+id/googleMapBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="더 조은 학원을 구글맵으로 표기" />
 
 
 </LinearLayout>
